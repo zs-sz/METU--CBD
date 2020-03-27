@@ -9,14 +9,16 @@ void setup() {
   stroke(100);
   fill(255);
   textSize(32);
-  r = width / 4;
+  r = 200;
 }
 
 void draw () {
   background(51);
+   r = 200;
   // move to middle
   translate(width / 2, height /2);
   float s = frameCount * 0.01;
+ 
   float x = cos(s) * r;
   float y = sin(s) * r;
   

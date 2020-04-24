@@ -1,9 +1,11 @@
 PImage img;
+PImage img2;
 PGraphics layer;
 
 void setup() {
   size(800, 800);
   img = loadImage("bg.png");
+  img2 = loadImage("masik.png");
   layer = createGraphics(width/2, height);
 }
 void draw() {

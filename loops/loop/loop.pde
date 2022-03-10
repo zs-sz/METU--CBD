@@ -10,12 +10,8 @@ void draw() {
   background(255);
   calculateBasics();
   
-  // i = counter
-  // 10
-  // 
   for(int i = 0; i < limit; i= i + 1) {
       float x = i * oneLimit;
-     // x = 60;
       float grey = map(i, 0, limit,0,360);
      
       fill(grey);
@@ -23,8 +19,6 @@ void draw() {
        x,0,oneLimit, height
      );
   }
-  
-  //
 }
 
 void calculateBasics() {

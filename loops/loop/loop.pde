@@ -1,5 +1,5 @@
-int limit = 10;
-float oneLimit = 0;
+int limit;
+float oneLimit;
 
 void setup() {
   size(600,600);
@@ -28,6 +28,6 @@ void draw() {
 }
 
 void calculateBasics() {
-  limit = 10;
+  limit = 5;
   oneLimit = width / limit;
 }

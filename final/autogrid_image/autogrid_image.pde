@@ -1,6 +1,6 @@
 // q racs cella merete
 // q is the size of the grid
-int q = 100;
+int q = 150;
 // tha half of the basic size
 int halfQ = q  / 2;
 int rowCount;
@@ -13,9 +13,9 @@ ArrayList<PImage> images;
 PImage currentImage;
 
 // REPLACE THE COLOR CODES WITH YOURS
-// IRD FELUL A SZINEKET A SAJATODDAL
-// color[] palette_a = {#fff587, #ff8c64, #ff665a, #7d6b7d, #a3a1a8};
-color[] palette_a = {#cccccc, #f2f2f2, #a6a6a6, #515151, #dedede};
+// IRD FELUL A SZIN KODOKAT A SAJATODDAL
+ color[] palette_a = {#fff587, #ff8c64, #ff665a, #7d6b7d, #a3a1a8};
+ // color[] palette_a = {#767466, #f2f2f2, #a6a6a6, #515151, #dedede};
 
 void setup() {
   size(900,900);  
@@ -30,38 +30,55 @@ void setup() {
 
   // REPLACE THE FILENAMES BELOW OR DUPLICATE THE LINES AS MANY TIMES YOU NEEDED (ONE LINE/IMAGE)
   // Csereld ki a fileneveket a kovetkezo sorokban a tiedre, ha nem eleg akkor duplikald a sort annnyiszor ahany keped van
-  
 
+  // KIT A
   // images.add(loadImage("item1.png"));
   // images.add(loadImage("item2.png"));
   // images.add(loadImage("item3.png"));
   // images.add(loadImage("item4.png"));
 
+  // KIT B
   // images.add(loadImage("kit2A.png"));
   // images.add(loadImage("kit2B.png"));
   // images.add(loadImage("kit2C.png"));
 
-  images.add(loadImage("tri1.png"));
-  images.add(loadImage("tri2.png"));
+  // KIT C
   images.add(loadImage("tri3.png"));
+  images.add(loadImage("tri2.png"));
+  images.add(loadImage("tri1.png"));
 
+
+  // KIT D
+  //images.add(loadImage("mix1.png"));
+ // images.add(loadImage("mix2.png"));
+  //images.add(loadImage("mix3.png"));
+ // images.add(loadImage("mix4.png"));
+  //images.add(loadImage("mix5.png"));
+
+
+    // KIT E
+  //images.add(loadImage("redcode1.png"));
+  // images.add(loadImage("redcode2.png"));
+  // images.add(loadImage("redcode3.png"));
+  // images.add(loadImage("redcode4.png"));
+  // images.add(loadImage("redcode5.png"));
   currentImage = ri();
 }
 
 
 void draw() {
    randomSeed(seed);
-
    translate(-q,-q);
 
    qMouseX = (int)map(mouseX,0,width,1, rowCount) * q;
    qMouseY = (int)map(mouseY,0,height,1, rowCount) * q;
 
    pushMatrix();
+   
    translate(qMouseX,qMouseY);
-   // blendMode(MULTIPLY);
+   // blendMode(ALPHA);
    if(mousePressed) {
-    int mult = (int)random(1,4);
+    int mult = (int)random(1,3);
     rotate(HALF_PI * mult);
     float s = q * mult;
     float halfQ = s / 2;
@@ -93,6 +110,10 @@ void keyReleased() {
      seed = (int)random(99999);
      background(rc());
      println(seed);
+  }
+  if(key == 'f') {
+     fill(255,14);
+     rect(0,0,width*2,height*2);
   }
 }
 

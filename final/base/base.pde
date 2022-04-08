@@ -8,7 +8,7 @@ void setup() {
   rectMode(CENTER);
   textAlign(CENTER);
   
-  typeFace = createFont("FoundersGrotesk-Bold", 48);
+  typeFace = createFont("Helvetica", 48);
   textFont(typeFace);
 }
 

@@ -22,7 +22,7 @@ public class COTY {
   public void processData() {
      JSONObject pantoneItem = pantoneList.getJSONObject(currentHead); 
      name = pantoneItem.getString("name");
-     r = color(Integer.parseInt(pantoneItem.getString("hex"), 16));
+     r = Integer.parseInt(pantoneItem.getString("hex"), 16);
     
      hex = color(red(r), green(r), blue(r));
      
@@ -30,7 +30,6 @@ public class COTY {
   
   public void next() {
     currentHead = (currentHead + 1) % maxItems;
-    println(currentHead);
     processData();
   };
   

@@ -8,7 +8,7 @@ PFont typeFace;
 ColorHarmony colorHarmony = new ColorHarmony(this);
 
 // THE HARMONIZED PALETTE
-color[] colors = new color[5];
+color[] colors = new color[2];
   
   
 void setup() {
@@ -35,7 +35,6 @@ void draw() {
   rect(0, 0, width / 2, height / 2);
   fill(255);
   text(data.name, 0, 12);
-  
 }
 
 void keyReleased() {
@@ -43,7 +42,9 @@ void keyReleased() {
 }
 
 color randomHarmony() {
+  // colors = colorHarmony.Monochromatic(data.hex);
   colors = colorHarmony.Analogous(data.hex);
+  //colors = colorHarmony.Complementary(data.hex);
   int index = int(random(0, colors.length - 1));
   return colors[index];
 }

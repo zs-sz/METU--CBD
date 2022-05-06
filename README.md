@@ -30,3 +30,10 @@ Inspiration:
 - https://twitter.com/wblut
 - https://www.instagram.com/explore/tags/generativeart/
 - https://twitter.com/RavenKwok
+
+Interactive Examples:
+https://openprocessing.org/browse/#
+http://www.generative-gestaltung.de/1/code
+
+
+

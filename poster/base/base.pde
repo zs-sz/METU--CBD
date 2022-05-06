@@ -18,8 +18,10 @@ void draw() {
   translate(width / 2, height / 2);
   rect(0, 0, width / 2, height / 2);
   fill(255);
-  
   text(data.name, 0, 12);
+  
+  
+  
 }
 
 void keyReleased() {
